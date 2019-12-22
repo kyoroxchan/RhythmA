@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradation">
+
+xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OperationActivity">
@@ -23,98 +28,174 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="◎前提条件"
+                android:textColor="#FFFFFF"
                 android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="二人でプレイするアプリなので自分を含め二人用意しましょう"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="◎操作方法"
+                android:textColor="#FFFFFF"
                 android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1:アプリを起動します"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2:検索の左側の枠にYoutubeのURLを入力(コピー)して[検索]を押します"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="3:[PLAY]を押します"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=" 4:画面が変わったら[START]を押します"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="5:自分のリズムに合わせて[TAP!]を押します(たくさん押します)"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="6:動画が終わるか気が済んだら[STOP]押します"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="7:シンクロ率が表示される"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=" 8:もう一度やりたい方は[同じ曲]か[新しい曲]を押します"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="◎大事なこと"
+                android:textColor="#FFFFFF"
                 android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
 
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=" 楽しくやりましょう"
+                android:textColor="#FFFFFF"
                 android:textSize="28sp" />
 
             <Button
                 android:id="@+id/esc"
-                android:layout_width="360dp"
+                android:layout_width="match_parent"
                 android:layout_height="75dp"
+                android:background="#FFFFFF"
                 android:text="戻る"
+                android:textColor="#FFFC7ADE"
                 android:textSize="36sp" />
+
         </LinearLayout>
     </ScrollView>
 

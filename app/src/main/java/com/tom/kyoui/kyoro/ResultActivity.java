@@ -63,11 +63,11 @@ public class ResultActivity extends AppCompatActivity {
 
         }else if(result >=1 && result < 20){
 
-            resultTextView2.setText("良くない相性");
+            resultTextView2.setText("悲しい相性");
 
         }else if(result >=0 && result < 1){
 
-            resultTextView2.setText("悲しい相性");
+            resultTextView2.setText("最悪の相性");
 
         }
 

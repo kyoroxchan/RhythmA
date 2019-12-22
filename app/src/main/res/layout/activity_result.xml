@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#04D5A8"
+    android:background="@drawable/gradation"
     tools:context=".ResultActivity">
 
     <TextView
@@ -28,30 +28,32 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="250dp"
-        android:layout_height="75dp"
+        android:layout_width="269dp"
+        android:layout_height="118dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="あなた達の　　　シンクロ率は"
-        android:textColor="#0000FF"
-        android:textSize="30sp"
+        android:text="あなた達の　　シンクロ率は"
+        android:textColor="#FC7ADE"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.17" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="195dp"
         android:layout_height="100dp"
         android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
         android:onClick="oldTrak"
         android:text="同じ曲"
+        android:textColor="#FC7ADE"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/newButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -61,8 +63,11 @@
         android:id="@+id/button4"
         android:layout_width="195dp"
         android:layout_height="100dp"
+        android:background="#FFFFFF"
         android:onClick="newTrak"
         android:text="新しい曲"
+        android:textColor="#FC7ADE"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

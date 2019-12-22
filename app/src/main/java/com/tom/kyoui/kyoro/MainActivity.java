@@ -34,7 +34,7 @@ public class MainActivity extends YouTubeBaseActivity {
     private Handler mHandler;
 
     private TextView timerTextView, tapTextView1, tapTextView2, loadTextView;
-    private Button startButton, stopButton, tapButton1, tapButton2, playButton,menu;
+    private Button startButton, stopButton, tapButton1, tapButton2, playButton,menu,search;
 
     private ConstraintLayout startLayout;
 
@@ -61,6 +61,7 @@ public class MainActivity extends YouTubeBaseActivity {
         loadTextView = (TextView) findViewById(R.id.loadtext);
         editText = (EditText) findViewById(R.id.editText);
 
+        search = (Button) findViewById(R.id.search);
         startButton = (Button) findViewById(R.id.start_button);
         stopButton = (Button) findViewById(R.id.stop_button);
         tapButton1 = (Button) findViewById(R.id.tap_button1);
@@ -93,6 +94,8 @@ public class MainActivity extends YouTubeBaseActivity {
                             loadTextView.setText("動画取得成功!!");
                             loadTextView.setTextColor(Color.rgb(0,0,255));
                             isVideoAvailable = true;
+                            search.setVisibility(View.INVISIBLE);
+                            playButton.setVisibility(View.VISIBLE);
                         }
                         // 読み込み成功したとき
 
@@ -160,6 +163,8 @@ public class MainActivity extends YouTubeBaseActivity {
                                     mCurrentTime = mCount * mPeriod;
                                     timerTextView.setText(dataFormat.format(mCurrentTime));
                                     mYouTubePlayer.play();
+                                    startButton.setVisibility(View.INVISIBLE);
+                                    stopButton.setVisibility(View.VISIBLE);
                                 }
                             });
 
@@ -172,11 +177,16 @@ public class MainActivity extends YouTubeBaseActivity {
             @Override
             public void onClick(View v) {
                 if (isVideoAvailable) {
+                    search.setVisibility(View.VISIBLE);
                     startLayout.setVisibility(View.INVISIBLE);
                     tapButton1.setVisibility(View.VISIBLE);
                     tapButton2.setVisibility(View.VISIBLE);
                     startButton.setVisibility(View.VISIBLE);
-                    stopButton.setVisibility(View.VISIBLE);
+                    stopButton.setVisibility(View.INVISIBLE);
+                    timerTextView.setVisibility(View.VISIBLE);
+                    tapTextView1.setVisibility(View.VISIBLE);
+                    tapTextView2.setVisibility(View.VISIBLE);
+                    player.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -236,22 +246,34 @@ public class MainActivity extends YouTubeBaseActivity {
         switch (requestCode) {
             case 123:
                 if (data.getIntExtra("isnewtrak", 0) == 1) {
+                    search.setVisibility(View.VISIBLE);
+                    playButton.setVisibility(View.INVISIBLE);
                     startLayout.setVisibility(View.VISIBLE);
                     tapButton1.setVisibility(View.INVISIBLE);
                     tapButton2.setVisibility(View.INVISIBLE);
                     startButton.setVisibility(View.INVISIBLE);
                     stopButton.setVisibility(View.INVISIBLE);
+                    timerTextView.setVisibility(View.INVISIBLE);
+                    tapTextView1.setVisibility(View.INVISIBLE);
+                    tapTextView2.setVisibility(View.INVISIBLE);
+                    player.setVisibility(View.INVISIBLE);
+
                     editText.setText("");
                     loadTextView.setText("URLを入力してください");
                     isSearchClicked = false;
                     isVideoAvailable = false;
 
                 } else {
+                    search.setVisibility(View.VISIBLE);
                     startLayout.setVisibility(View.INVISIBLE);
                     tapButton1.setVisibility(View.VISIBLE);
                     tapButton2.setVisibility(View.VISIBLE);
                     startButton.setVisibility(View.VISIBLE);
-                    stopButton.setVisibility(View.VISIBLE);
+                    stopButton.setVisibility(View.INVISIBLE);
+                    timerTextView.setVisibility(View.VISIBLE);
+                    tapTextView1.setVisibility(View.VISIBLE);
+                    tapTextView2.setVisibility(View.VISIBLE);
+                    player.setVisibility(View.VISIBLE);
 
                 }
                 break;
