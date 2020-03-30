@@ -1,4 +1,4 @@
-package com.tom.kyoui.kyoro;
+package com.tom.kyoui.kyoroxchan;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

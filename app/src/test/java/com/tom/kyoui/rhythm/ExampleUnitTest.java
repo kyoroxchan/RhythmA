@@ -1,4 +1,4 @@
-package com.tom.kyoui.kyoro;
+package com.tom.kyoui.kyoroxchan;
 
 import org.junit.Test;
 

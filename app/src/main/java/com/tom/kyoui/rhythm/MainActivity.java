@@ -1,4 +1,4 @@
-package com.tom.kyoui.kyoro;
+package com.tom.kyoui.kyoroxchan;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -76,7 +76,7 @@ public class MainActivity extends YouTubeBaseActivity {
         player.initialize(YoutubeAPI, new YouTubePlayer.OnInitializedListener() {
 
             @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+            public void onInitializationSuccess(final YouTubePlayer.Provider provider, final YouTubePlayer youTubePlayer, boolean b) {
 
                 mYouTubePlayer = youTubePlayer;
                 mYouTubePlayer.setPlayerStateChangeListener(new YouTubePlayer.PlayerStateChangeListener() {
@@ -96,6 +96,8 @@ public class MainActivity extends YouTubeBaseActivity {
                             isVideoAvailable = true;
                             search.setVisibility(View.INVISIBLE);
                             playButton.setVisibility(View.VISIBLE);
+
+
                         }
                         // 読み込み成功したとき
 
@@ -149,6 +151,7 @@ public class MainActivity extends YouTubeBaseActivity {
             @Override
             public void onClick(View v) {
                 if (mTimer == null) {
+                    mYouTubePlayer.play();
                     mCount = 0;
                     mTapTimeList1 = new ArrayList<>();
                     mTapTimeList2 = new ArrayList<>();
@@ -162,7 +165,7 @@ public class MainActivity extends YouTubeBaseActivity {
                                     mCount++;
                                     mCurrentTime = mCount * mPeriod;
                                     timerTextView.setText(dataFormat.format(mCurrentTime));
-                                    mYouTubePlayer.play();
+
                                     startButton.setVisibility(View.INVISIBLE);
                                     stopButton.setVisibility(View.VISIBLE);
                                 }
@@ -187,6 +190,7 @@ public class MainActivity extends YouTubeBaseActivity {
                     tapTextView1.setVisibility(View.VISIBLE);
                     tapTextView2.setVisibility(View.VISIBLE);
                     player.setVisibility(View.VISIBLE);
+                    mYouTubePlayer.pause();
                 }
             }
         });
